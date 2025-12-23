@@ -1,78 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Unit 4 · Lesson 1 — Go Green</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 4 — Save & Shine | Mini Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Mini learning platform for Unit 4: Save & Shine — 4 lessons + interactive unit exam." />
 </head>
 <body>
-  <div id="confetti"></div>
-  <header class="top">
-    <div class="brand">Unit 4 · Save & Shine</div>
-    <div class="byline">Lesson 1 — Go Green · British Voice · Phone‑friendly</div>
+  <canvas id="confetti"></canvas>
+  <header>
+    <h1>Unit 4 — Save & Shine</h1>
+    <div class="sub">Designed for students by <b>Asmaa Mahmoud El-Hagarsi</b> · British voice · Mobile friendly</div>
+    <div class="tabs"></div>
   </header>
-  <div class="welcome">Welcome to Lesson 1! Learn, play, and shine. 🌿</div>
-
-  <nav class="tabs" role="tablist">
-    <button class="tab active" data-target="#vocab">Vocabulary</button>
-    <button class="tab" data-target="#reading">Reading</button>
-    <button class="tab" data-target="#games">Games</button>
-    <button class="tab" data-target="#exam">Exam</button>
-  </nav>
-
-  <!-- Vocabulary -->
-  <section id="vocab" class="section active">
-    <div class="grid" id="vocabGrid"></div>
-    <div class="hr"></div>
-    <div class="dictation card">
-      <h3>Dictation (Arabic → English)</h3>
-      <p class="small">See the Arabic meaning, <b>hear</b> the English word. Type the word correctly.</p>
-      <div id="dictation"></div>
-    </div>
-  </section>
-
-  <!-- Reading -->
-  <section id="reading" class="section">
-    <div class="grid" id="readingGrid"></div>
-    <div class="hr"></div>
-    <div class="card" id="readingQuiz"></div>
-  </section>
-
-  <!-- Games -->
-  <section id="games" class="section">
-    <div class="card">
-      <h3>Drag & Drop — Match the word to its Arabic meaning</h3>
-      <p class="small">Drag each <span class="kbd">English</span> card onto the matching <span class="kbd">Arabic</span> target.</p>
-      <div class="dnd-wrap">
-        <div class="targets" id="dndTargets"></div>
-        <div class="sources" id="dndSources"></div>
-      </div>
-    </div>
-
-    <div class="hr"></div>
-
-    <div class="card" id="kahoot"></div>
-
-    <div class="hr"></div>
-
-    <div class="card" id="colorQuiz">
-      <h3>Color Blast — اختر المعنى الصحيح</h3>
-      <p class="small">اعرض الكلمة بالعربي، واختر معناها بالإنجليزية. مؤثرات ممتعة وصوت تشجيع عند الإجابة الصحيحة.</p>
-    </div>
-  </section>
-
-  <!-- Exam -->
-  <section id="exam" class="section">
-    <div class="card" id="unitExam">
-      <h3>Mini Exam — Vocabulary MCQ</h3>
-      <p class="small">Instructions: Choose the best answer.</p>
-    </div>
-  </section>
-
-  <footer class="foot">© For Ms. Asmaa — compact mini platform</footer>
-
-  <script src="script.js"></script>
+  <div class="container">
+    <!-- Sections are injected by JS: Lessons 1–4 and Unit Exam -->
+  </div>
+  <footer>© 2025 — Interactive mini platform. Works offline; speech depends on device voices.</footer>
+  <script src="app.js"></script>
 </body>
 </html>

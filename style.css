@@ -1,38 +1,75 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
-    color: #333;
+/* Save & Shine – Mini Platform (Unit 4)
+   Mobile-first design with bright colors and tabbed navigation.
+*/
+:root{
+  --green:#2ecc71; --dark:#263238; --light:#f7f9fc; --accent:#ff8a65; --blue:#3498db; --violet:#8e44ad; --yellow:#f1c40f;
 }
-header {
-    background: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 15px;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--light);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--dark)}
+header{
+  background:linear-gradient(135deg,var(--green),var(--blue));color:white;padding:16px 12px;position:sticky;top:0;z-index:10;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
-.main-tabs {
-    display: flex;
-    justify-content: space-around;
-    background: #ddd;
-    padding: 10px;
+header h1{margin:0;font-size:20px}
+header .sub{opacity:.9;font-size:12px}
+.container{padding:10px}
+
+/* Top-level tabs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{
+  background:white;border-radius:10px;padding:10px 12px;flex:1 1 calc(50% - 8px);text-align:center;cursor:pointer;
+  border:2px solid transparent;transition:all .2s;box-shadow:0 2px 6px rgba(0,0,0,.08);
 }
-.tab-btn {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.tab-content {
-    display: none;
-    padding: 20px;
-}
-.card {
-    background: #fff;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+.tab:hover{border-color:var(--blue)}
+.tab.active{background:var(--blue);color:white}
+
+.section{display:none;}
+.section.active{display:block;}
+
+/* Subtabs inside a lesson */
+.subtabs{display:flex;gap:6px;margin-top:6px}
+.subtab{background:#fff;border-radius:8px;padding:8px;flex:1;text-align:center;cursor:pointer;border:2px solid transparent;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.subtab.active{background:var(--green);color:white}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:10px}
+.card{background:white;border-radius:14px;padding:12px;border-left:8px solid var(--accent);box-shadow:0 3px 10px rgba(0,0,0,.1);}
+.card h3{margin:0 0 6px 0}
+.card .ar{color:#444;font-size:13px}
+.card .ex{background:#f0f9ff;border-radius:8px;padding:6px;margin-top:8px}
+.card .btns{display:flex;gap:8px;margin-top:8px}
+.btn{padding:10px 12px;border:none;border-radius:10px;background:var(--blue);color:white;font-weight:600;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+.btn.secondary{background:var(--green)}
+.btn.warning{background:var(--accent)}
+.btn.small{padding:6px 8px;font-size:12px}
+
+/* Games */
+.board{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.dropzone,.draggable{background:white;border:2px dashed #bbb;border-radius:12px;padding:10px;min-height:60px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.draggable{border-style:solid;background:#fff8e1}
+.pair{display:flex;flex-direction:column;gap:8px}
+
+/* Quiz */
+.quiz{margin-top:10px}
+.qcard{background:white;border-radius:14px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.option{background:#eef6ff;padding:10px;border-radius:10px;margin:6px 0;cursor:pointer;border:2px solid transparent}
+.option:hover{border-color:var(--blue)}
+.option.correct{background:#e8f5e9;border-color:var(--green)}
+.option.wrong{background:#ffebee;border-color:#e53935}
+
+/* Reading */
+.sentence{background:#fff;border-left:6px solid var(--violet);border-radius:10px;padding:10px;margin-top:8px}
+.mcq{background:#fff;border-radius:10px;padding:10px;margin-top:10px}
+
+/* Grammar */
+.rule{background:#fff3e0;border-radius:12px;padding:12px;border-left:8px solid var(--yellow)}
+
+/* Exam */
+.exam-header{background:#0d47a1;color:white;border-radius:12px;padding:12px;margin-top:8px}
+.progress{height:8px;background:#e0e0e0;border-radius:10px;margin-top:8px}
+.progress .bar{height:8px;background:var(--green);border-radius:10px;width:0%}
+
+/* Confetti canvas */
+#confetti{position:fixed;inset:0;pointer-events:none}
+
+footer{margin:40px 0 20px;color:#555;text-align:center}
