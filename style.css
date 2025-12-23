@@ -1,20 +1,21 @@
 :root{
-  /* Yellow light theme */
-  --bg:#fffef9; --text:#253238; --white:#ffffff; 
-  --y1:#fff9c4; --y2:#ffecb3; --y3:#ffe082; --y4:#ffd54f; --y5:#ffcc80; --y6:#ffeaa7;
+  /* Yellow light theme v4 */
+  --bg:#fffef9; --text:#24303a; --white:#ffffff;
+  --yA:#fff9c4; --yB:#ffecb3; --yC:#ffe082; --yD:#ffd54f; --yE:#ffcc80; --yF:#ffeaa7;
   --green:#9be7a3; --blue:#a7d8f0; --violet:#e3d7ff; --border:#efe7cc;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial}
-header{background:linear-gradient(135deg,var(--y2),var(--blue));color:#5b4100;padding:16px 12px;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--border)}
+header{background:linear-gradient(135deg,var(--yB),var(--blue));color:#5b4100;padding:16px 12px;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--border);display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center}
 header h1{margin:0;font-size:20px}
 header .sub{opacity:.9;font-size:12px}
+#shareBtn{padding:8px 12px;border:none;border-radius:10px;background:#ffd54f;color:#4a3000;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.06)}
 .container{padding:12px}
 
 /* Top tabs */
 .tabs{display:flex;gap:10px;flex-wrap:wrap}
 .tab{background:var(--white);border-radius:14px;padding:10px 12px;flex:1 1 calc(50% - 10px);text-align:center;cursor:pointer;border:1px solid var(--border);transition:all .2s;box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.tab.active{background:var(--y3);color:#4a3700;border-color:#f3d370}
+.tab.active{background:var(--yC);color:#4a3700;border-color:#f3d370}
 
 .section{display:none}
 .section.active{display:block}
@@ -25,8 +26,8 @@ header .sub{opacity:.9;font-size:12px}
 .subtab.active{background:var(--green);color:#0e3b2b;border-color:#8fe09a}
 
 /* Cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:10px}
-.card{background:var(--white);border-radius:16px;padding:12px;border:1px solid var(--border);box-shadow:0 3px 10px rgba(0,0,0,.05)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
+.card{border-radius:16px;padding:12px;border:1px solid var(--border);box-shadow:0 3px 10px rgba(0,0,0,.05)}
 .card h3{margin:0 0 6px 0}
 .card .ar{color:#425466;font-size:13px}
 .card .ex{background:#fffdf2;border-radius:8px;padding:8px;margin-top:8px;border:1px dashed #f3d370}
@@ -57,13 +58,16 @@ header .sub{opacity:.9;font-size:12px}
 .mcq{background:var(--white);border-radius:12px;padding:10px;margin-top:10px;border:1px solid var(--border)}
 
 /* Grammar */
-.rule{background:#fffbea;border-radius:12px;padding:12px;border-left:8px solid var(--y4);border:1px solid var(--border)}
+.rule{background:#fffbea;border-radius:12px;padding:12px;border-left:8px solid var(--yD);border:1px solid var(--border)}
 
 /* Exam */
-.exam-header{background:linear-gradient(135deg,var(--y3),var(--blue));color:#4a3700;border-radius:14px;padding:12px;margin-top:8px;border:1px solid #f3d370}
+.exam-header{background:linear-gradient(135deg,var(--yC),var(--blue));color:#4a3700;border-radius:14px;padding:12px;margin-top:8px;border:1px solid #f3d370}
 .progress{height:8px;background:#f6f0d1;border-radius:10px;margin-top:8px}
 .progress .bar{height:8px;background:#9be7a3;border-radius:10px;width:0%}
 
+/* Toast */
+.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#4a3700;color:#fff;padding:10px 16px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:30}
+
 /* Confetti */
-#confetti{position:fixed;inset:0;pointer-events:none}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:5}
 footer{margin:32px 0 20px;color:#6b7280;text-align:center}
