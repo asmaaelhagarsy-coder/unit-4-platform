@@ -2,58 +2,32 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f9f9f9;
-    color: #333;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    color: #fff;
+    animation: fadeIn 2s ease-in;
 }
 header {
-    background: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-.main-tabs {
     display: flex;
-    justify-content: space-around;
-    background: #ddd;
-    padding: 10px;
-}
-.tab-btn {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.tab-btn:hover {
-    background: #45a049;
-}
-.tab-content {
-    display: none;
-    padding: 20px;
-}
-.sub-tabs {
-    margin-top: 10px;
-}
-.sub-tabs button {
-    background: #2196F3;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 5px;
-}
-.sub-content {
-    display: none;
-    margin-top: 15px;
-    background: #fff;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.3);
 }
-footer {
-    text-align: center;
+.main-tabs button, .sub-tabs button {
+    margin: 5px;
     padding: 10px;
-    background: #4CAF50;
-    color: white;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.main-tabs button:hover, .sub-tabs button:hover {
+    transform: scale(1.1);
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

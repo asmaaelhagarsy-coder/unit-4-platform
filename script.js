@@ -1,15 +1,9 @@
-function openTab(tabId) {
-    document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
-    document.getElementById(tabId).style.display = 'block';
-}
-
-function openSubTab(subId) {
-    document.querySelectorAll('.sub-content').forEach(sub => sub.style.display = 'none');
-    document.getElementById(subId).style.display = 'block';
-}
-
-// افتراضيًا افتح Lesson 1 عند تحميل الصفحة
-window.onload = () => {
-    openTab('lesson1');
-    openSubTab('vocab1');
-};
+document.addEventListener('DOMContentLoaded', () => {
+    const shareBtn = document.getElementById('shareBtn');
+    shareBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Link copied!');
+    });
+    const audio = document.getElementById('welcomeAudio');
+    audio.play();
+});
