@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 4 - Save and Shine</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>Interactive Learning - By أسماء محمود الهجرسى</h1>
+</header>
+
+<nav class="main-tabs">
+    <button class="tab-btn" onclick="openTab('lesson1')">Lesson 1</button>
+    <button class="tab-btn" onclick="openTab('lesson2')">Lesson 2</button>
+    <button class="tab-btn" onclick="openTab('lesson3')">Lesson 3</button>
+    <button class="tab-btn" onclick="openTab('lesson4')">Lesson 4</button>
+    <button class="tab-btn" onclick="openTab('unitExam')">Unit Exam</button>
+</nav>
+
+<section id="lesson1" class="tab-content">
+    <h2>Lesson 1: Go Green</h2>
+    <div class="sub-tabs">
+        <button onclick="openSubTab('vocab1')">Vocabulary</button>
+        <button onclick="openSubTab('games1')">Games</button>
+        <button onclick="openSubTab('reading1')">Reading</button>
+    </div>
+    <div id="vocab1" class="sub-content">
+        <h3>Vocabulary</h3>
+        <p>Colorful cards with words, meanings, and audio will appear here.</p>
+    </div>
+    <div id="games1" class="sub-content">
+        <h3>Games</h3>
+        <p>Drag & Drop and Kahoot-style quiz will appear here.</p>
+    </div>
+    <div id="reading1" class="sub-content">
+        <h3>Reading</h3>
+        <p>6 simple sentences with audio and MCQs will appear here.</p>
+    </div>
+</section>
+
+<section id="lesson2" class="tab-content">
+    <h2>Lesson 2: One Bag at a Time</h2>
+    <p>Same structure as Lesson 1.</p>
+</section>
+
+<section id="lesson3" class="tab-content">
+    <h2>Lesson 3: Small Actions Can Make a Difference</h2>
+    <div class="sub-tabs">
+        <button onclick="openSubTab('vocab3')">Vocabulary</button>
+        <button onclick="openSubTab('games3')">Games</button>
+        <button onclick="openSubTab('reading3')">Reading</button>
+        <button onclick="openSubTab('grammar3')">Grammar</button>
+    </div>
+    <div id="grammar3" class="sub-content">
+        <h3>Grammar</h3>
+        <p>Simple explanation and interactive exercises will appear here.</p>
+    </div>
+</section>
+
+<section id="lesson4" class="tab-content">
+    <h2>Lesson 4: Helping Our Community</h2>
+    <p>Same structure as Lesson 1.</p>
+</section>
+
+<section id="unitExam" class="tab-content">
+    <h2>Unit Exam</h2>
+    <p>Comprehensive exam for the whole unit will appear here.</p>
+</section>
+
+<footer>
+    <p>© 2025 أسماء محمود الهجرسى</p>
+</footer>
+</body>
+</html>
