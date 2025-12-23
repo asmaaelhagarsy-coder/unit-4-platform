@@ -1,75 +1,64 @@
-/* Save & Shine – Mini Platform (Unit 4)
-   Mobile-first design with bright colors and tabbed navigation.
-*/
 :root{
-  --green:#2ecc71; --dark:#263238; --light:#f7f9fc; --accent:#ff8a65; --blue:#3498db; --violet:#8e44ad; --yellow:#f1c40f;
+  --bg:#fdfdfd; --text:#253238; --white:#ffffff; --softBlue:#a7d8f0; --softGreen:#b8e994; --softYellow:#ffeaa7; --softPeach:#ffd5c2; --softViolet:#d9c7ff; --border:#e6e9ef;
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--light);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--dark)}
-header{
-  background:linear-gradient(135deg,var(--green),var(--blue));color:white;padding:16px 12px;position:sticky;top:0;z-index:10;
-  box-shadow:0 4px 12px rgba(0,0,0,.15);
-}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+header{background:linear-gradient(135deg,var(--softBlue),var(--softGreen));color:#0b3d5e;padding:16px 12px;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--border)}
 header h1{margin:0;font-size:20px}
 header .sub{opacity:.9;font-size:12px}
-.container{padding:10px}
+.container{padding:12px}
 
-/* Top-level tabs */
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{
-  background:white;border-radius:10px;padding:10px 12px;flex:1 1 calc(50% - 8px);text-align:center;cursor:pointer;
-  border:2px solid transparent;transition:all .2s;box-shadow:0 2px 6px rgba(0,0,0,.08);
-}
-.tab:hover{border-color:var(--blue)}
-.tab.active{background:var(--blue);color:white}
+/* Top tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap}
+.tab{background:var(--white);border-radius:12px;padding:10px 12px;flex:1 1 calc(50% - 10px);text-align:center;cursor:pointer;border:1px solid var(--border);transition:all .2s;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.tab.active{background:var(--softBlue);color:#04334d;border-color:#89c9e6}
 
-.section{display:none;}
-.section.active{display:block;}
+.section{display:none}
+.section.active{display:block}
 
-/* Subtabs inside a lesson */
-.subtabs{display:flex;gap:6px;margin-top:6px}
-.subtab{background:#fff;border-radius:8px;padding:8px;flex:1;text-align:center;cursor:pointer;border:2px solid transparent;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-.subtab.active{background:var(--green);color:white}
+/* Subtabs */
+.subtabs{display:flex;gap:8px;margin-top:8px}
+.subtab{background:var(--white);border-radius:10px;padding:8px;flex:1;text-align:center;cursor:pointer;border:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.subtab.active{background:var(--softGreen);color:#0e3b2b;border-color:#98dea9}
 
 /* Cards */
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:10px}
-.card{background:white;border-radius:14px;padding:12px;border-left:8px solid var(--accent);box-shadow:0 3px 10px rgba(0,0,0,.1);}
+.card{background:var(--white);border-radius:14px;padding:12px;border:1px solid var(--border);box-shadow:0 3px 10px rgba(0,0,0,.05)}
 .card h3{margin:0 0 6px 0}
-.card .ar{color:#444;font-size:13px}
-.card .ex{background:#f0f9ff;border-radius:8px;padding:6px;margin-top:8px}
+.card .ar{color:#425466;font-size:13px}
+.card .ex{background:#f4fbff;border-radius:8px;padding:8px;margin-top:8px}
 .card .btns{display:flex;gap:8px;margin-top:8px}
-.btn{padding:10px 12px;border:none;border-radius:10px;background:var(--blue);color:white;font-weight:600;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.1)}
-.btn.secondary{background:var(--green)}
-.btn.warning{background:var(--accent)}
+.btn{padding:10px 12px;border:none;border-radius:10px;background:#89c9e6;color:#07334c;font-weight:600;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.btn.secondary{background:#98dea9;color:#0b3c2b}
+.btn.warning{background:#ffd5c2;color:#5b2b12}
 .btn.small{padding:6px 8px;font-size:12px}
 
 /* Games */
 .board{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.dropzone,.draggable{background:white;border:2px dashed #bbb;border-radius:12px;padding:10px;min-height:60px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
-.draggable{border-style:solid;background:#fff8e1}
+.dropzone,.draggable{background:var(--white);border:2px dashed #cfd6e6;border-radius:12px;padding:12px;min-height:60px;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+.draggable{border-style:solid;background:#fffef5}
 .pair{display:flex;flex-direction:column;gap:8px}
+.selected{outline:3px solid #89c9e6}
 
 /* Quiz */
 .quiz{margin-top:10px}
-.qcard{background:white;border-radius:14px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
-.option{background:#eef6ff;padding:10px;border-radius:10px;margin:6px 0;cursor:pointer;border:2px solid transparent}
-.option:hover{border-color:var(--blue)}
-.option.correct{background:#e8f5e9;border-color:var(--green)}
-.option.wrong{background:#ffebee;border-color:#e53935}
+.qcard{background:var(--white);border-radius:14px;padding:12px;border:1px solid var(--border);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.option{background:#f2f8ff;padding:10px;border-radius:10px;margin:6px 0;cursor:pointer;border:2px solid transparent}
+.option:hover{border-color:#89c9e6}
+.option.correct{background:#effbf1;border-color:#98dea9}
+.option.wrong{background:#fff1f0;border-color:#ff8c86}
 
 /* Reading */
-.sentence{background:#fff;border-left:6px solid var(--violet);border-radius:10px;padding:10px;margin-top:8px}
-.mcq{background:#fff;border-radius:10px;padding:10px;margin-top:10px}
+.sentence{background:var(--white);border-left:6px solid var(--softViolet);border-radius:10px;padding:10px;margin-top:8px;border:1px solid var(--border)}
+.mcq{background:var(--white);border-radius:10px;padding:10px;margin-top:10px;border:1px solid var(--border)}
 
 /* Grammar */
-.rule{background:#fff3e0;border-radius:12px;padding:12px;border-left:8px solid var(--yellow)}
+.rule{background:#fffbea;border-radius:12px;padding:12px;border-left:8px solid var(--softYellow);border:1px solid var(--border)}
 
 /* Exam */
-.exam-header{background:#0d47a1;color:white;border-radius:12px;padding:12px;margin-top:8px}
-.progress{height:8px;background:#e0e0e0;border-radius:10px;margin-top:8px}
-.progress .bar{height:8px;background:var(--green);border-radius:10px;width:0%}
+.exam-header{background:#a7d8f0;color:#04334d;border-radius:12px;padding:12px;margin-top:8px;border:1px solid #89c9e6}
+.progress{height:8px;background:#eef2f7;border-radius:10px;margin-top:8px}
+.progress .bar{height:8px;background:#98dea9;border-radius:10px;width:0%}
 
-/* Confetti canvas */
 #confetti{position:fixed;inset:0;pointer-events:none}
-
-footer{margin:40px 0 20px;color:#555;text-align:center}
+footer{margin:32px 0 20px;color:#64748b;text-align:center}
