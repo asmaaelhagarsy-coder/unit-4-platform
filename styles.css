@@ -1,50 +1,52 @@
 
-/* Theme: Save & Shine - compact, phone-friendly */
 :root{
-  --bg:#0f172a;           /* slate-900 */
-  --card:#111827;         /* gray-900 */
-  --accent:#22c55e;       /* green-500 */
-  --accent-2:#16a34a;     /* green-600 */
-  --text:#f8fafc;         /* gray-50 */
-  --muted:#cbd5e1;        /* gray-300 */
-  --warn:#ef4444;         /* red-500 */
-  --ok:#38bdf8;           /* sky-400 */
+  --bg:#0b1020; --panel:#0f172a; --card:#101826; --text:#e8f1ff;
+  --muted:#b8c6df; --green:#22c55e; --green-2:#16a34a; --blue:#0ea5e9; --pink:#e11d48; --amber:#f59e0b;
 }
 *{box-sizing:border-box}
-html,body{height:100%;}
-body{margin:0;background:linear-gradient(180deg,var(--bg),#020617);color:var(--text);font-family:system-ui,Segoe UI,Arial,sans-serif}
-.container{max-width:980px;margin:0 auto;padding:12px}
-.header{display:flex;align-items:center;gap:10px;justify-content:space-between}
-.brand{font-weight:700;font-size:1.1rem;color:var(--accent)}
-.welcome{background:#064e3b;color:#a7f3d0;padding:10px;border-radius:10px;margin:10px 0;font-size:.95rem}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
-.tab{padding:8px 12px;border-radius:999px;background:#0b1324;color:#a7b0bf;border:1px solid #1f2937;cursor:pointer}
-.tab.active{background:var(--accent);color:#04210e;border-color:var(--accent-2);font-weight:700}
-.section{display:none}
+body{margin:0;background:linear-gradient(180deg,var(--bg),#050816);color:var(--text);font-family:system-ui,"Segoe UI",Arial,sans-serif}
+.top{display:flex;justify-content:space-between;gap:8px;padding:12px 16px;background:#071022;border-bottom:1px solid #132036}
+.brand{font-weight:800;color:var(--green)}
+.byline{color:#9fb0d1;font-size:.9rem}
+.welcome{margin:10px auto;max-width:980px;padding:10px 12px;background:#07321f;color:#bffbd3;border:1px solid #14532d;border-radius:12px}
+.tabs{display:flex;gap:8px;max-width:980px;margin:0 auto 8px;padding:0 12px;flex-wrap:wrap}
+.tab{background:#0f1b34;color:#cfe0ff;border:1px solid #1f2f4a;padding:8px 12px;border-radius:999px;cursor:pointer}
+.tab.active{background:var(--green);color:#03180a;border-color:var(--green-2);font-weight:800}
+.section{display:none;max-width:980px;margin:0 auto;padding:6px 12px}
 .section.active{display:block}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.card{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:12px;position:relative}
-.card h3{margin:0 0 6px 0;color:#86efac}
-.card p{margin:4px 0;color:#cbd5e1}
-.btn{background:var(--accent);color:#062e0e;border:none;padding:8px 12px;border-radius:10px;font-weight:700;cursor:pointer}
-.btn.secondary{background:#0ea5e9;color:#022c3a}
-.btn.warn{background:var(--warn)}
-.small{font-size:.85rem;color:#cbd5e1}
-.row{display:flex;gap:8px;flex-wrap:wrap}
-.play{position:absolute;right:10px;top:10px;background:#0ea5e9;color:white;border:none;border-radius:999px;width:32px;height:32px;display:grid;place-items:center;cursor:pointer}
-.kbd{padding:2px 6px;border-radius:6px;background:#0b1324;border:1px solid #1f2937;color:#93c5fd}
-.hr{height:1px;background:#1f2937;margin:10px 0}
-/* Drag & Drop */
-.dropzone{min-height:120px;background:#0b1324;border:2px dashed #334155;border-radius:12px;padding:10px}
-.draggable{padding:10px;background:#1e293b;border:1px solid #334155;border-radius:10px;cursor:grab}
-.draggable:active{cursor:grabbing}
-.correct{border-color:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.35)}
-.incorrect{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.35)}
-/* Quiz */
-.quiz-card{background:#0b1324;border:1px solid #1f2937;border-radius:12px;padding:12px}
-.option{padding:10px;margin:8px 0;border-radius:10px;background:#111827;border:1px solid #1f2937;cursor:pointer}
-.option.correct{background:#064e3b;color:#34d399;border-color:#34d399}
-.option.wrong{background:#450a0a;color:#fecaca;border-color:#ef4444}
-.score{font-weight:700;color:#93c5fd}
-/* Confetti */
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.card{background:var(--card);border:1px solid #1c2a41;border-radius:14px;padding:12px;position:relative}
+.card h3{margin:0 0 6px 0;color:#7ef9a7}
+.small{color:#b8c6df}
+.hr{height:1px;background:#1b2943;margin:12px 0}
+.play{position:absolute;right:10px;top:10px;width:32px;height:32px;border-radius:999px;border:none;background:var(--blue);color:white;display:grid;place-items:center;cursor:pointer}
+.badge{display:inline-block;background:#0f1b34;border:1px solid #223456;color:#9cc0ff;padding:2px 8px;border-radius:999px;font-size:.75rem}
+.example{color:#d8e6ff}
+.kbd{background:#0e1730;color:#93c5fd;padding:2px 6px;border-radius:6px;border:1px solid #203158}
 #confetti{position:fixed;inset:0;pointer-events:none}
+
+/* DnD */
+.dnd-wrap{display:grid;gap:10px}
+.targets,.sources{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.target{padding:12px;background:#0e1426;border:2px dashed #2b3f67;border-radius:12px;min-height:60px}
+.draggable{padding:10px;border-radius:12px;border:1px solid #274168;background:linear-gradient(145deg,#132544,#0d1b34);color:#dbeafe;cursor:grab;text-align:center;font-weight:700}
+.draggable:active{cursor:grabbing}
+.correct{animation:pop .25s ease;box-shadow:0 0 0 3px rgba(34,197,94,.35)}
+.wrong{animation:shake .25s linear;background:#311018;border-color:#e11d48}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+@keyframes pop{0%{transform:scale(.96)}100%{transform:scale(1)}}
+
+/* Color quiz buttons */
+.color-btn{padding:12px;border-radius:12px;border:1px solid #21365a;color:white;cursor:pointer;margin:8px 0;font-weight:800}
+.color-1{background:#0ea5e9}
+.color-2{background:#22c55e}
+.color-3{background:#e11d48}
+.color-4{background:#f59e0b}
+.option{padding:10px;margin:8px 0;border-radius:10px;background:#0d1b33;border:1px solid #1f2f44;cursor:pointer}
+.option.correct{background:#08351f;border-color:#22c55e;color:#b7ffd6}
+.option.wrong{background:#3a0b15;border-color:#e11d48;color:#ffd1d9}
+.score{font-weight:800;color:#93c5fd}
+input[type=text]{width:100%;padding:10px;border-radius:10px;border:1px solid #20355e;background:#0e1831;color:#e6f0ff}
+.btn{background:var(--green);color:#06280f;border:none;padding:8px 12px;border-radius:10px;font-weight:800;cursor:pointer}
+.btn.secondary{background:var(--blue);color:#032335}
+.foot{max-width:980px;margin:12px auto;color:#88a2cd;text-align:center;font-size:.85rem}

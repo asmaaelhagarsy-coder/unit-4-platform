@@ -4,24 +4,75 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Save & Shine - Lesson</title>
+  <title>Unit 4 · Lesson 1 — Go Green</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <div id="confetti"></div>
-  <div class="container">
-    <div class="header">
-      <div class="brand">Unit 4</div>
-      <div class="small">English interface · British voice · Phone friendly</div>
+  <header class="top">
+    <div class="brand">Unit 4 · Save & Shine</div>
+    <div class="byline">Lesson 1 — Go Green · British Voice · Phone‑friendly</div>
+  </header>
+  <div class="welcome">Welcome to Lesson 1! Learn, play, and shine. 🌿</div>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-target="#vocab">Vocabulary</button>
+    <button class="tab" data-target="#reading">Reading</button>
+    <button class="tab" data-target="#games">Games</button>
+    <button class="tab" data-target="#exam">Exam</button>
+  </nav>
+
+  <!-- Vocabulary -->
+  <section id="vocab" class="section active">
+    <div class="grid" id="vocabGrid"></div>
+    <div class="hr"></div>
+    <div class="dictation card">
+      <h3>Dictation (Arabic → English)</h3>
+      <p class="small">See the Arabic meaning, <b>hear</b> the English word. Type the word correctly.</p>
+      <div id="dictation"></div>
     </div>
-    <div class="welcome">Welcome!</div>
-    <div class="tabs"></div>
-    <div id="vocab" class="section active"></div>
-    <div id="games" class="section"></div>
-    <div id="reading" class="section"></div>
-    <div id="grammar" class="section"></div>
-    <div id="exam" class="section"></div>
-  </div>
+  </section>
+
+  <!-- Reading -->
+  <section id="reading" class="section">
+    <div class="grid" id="readingGrid"></div>
+    <div class="hr"></div>
+    <div class="card" id="readingQuiz"></div>
+  </section>
+
+  <!-- Games -->
+  <section id="games" class="section">
+    <div class="card">
+      <h3>Drag & Drop — Match the word to its Arabic meaning</h3>
+      <p class="small">Drag each <span class="kbd">English</span> card onto the matching <span class="kbd">Arabic</span> target.</p>
+      <div class="dnd-wrap">
+        <div class="targets" id="dndTargets"></div>
+        <div class="sources" id="dndSources"></div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="card" id="kahoot"></div>
+
+    <div class="hr"></div>
+
+    <div class="card" id="colorQuiz">
+      <h3>Color Blast — اختر المعنى الصحيح</h3>
+      <p class="small">اعرض الكلمة بالعربي، واختر معناها بالإنجليزية. مؤثرات ممتعة وصوت تشجيع عند الإجابة الصحيحة.</p>
+    </div>
+  </section>
+
+  <!-- Exam -->
+  <section id="exam" class="section">
+    <div class="card" id="unitExam">
+      <h3>Mini Exam — Vocabulary MCQ</h3>
+      <p class="small">Instructions: Choose the best answer.</p>
+    </div>
+  </section>
+
+  <footer class="foot">© For Ms. Asmaa — compact mini platform</footer>
+
   <script src="script.js"></script>
 </body>
 </html>
